@@ -4,7 +4,7 @@ module Tflipflop_oneShot(clk, rst, T, Q);
     
     reg T_reg;
     
-    always @(posedge clk) begin
+    always @(posedge clk or negedge !rst) begin
         if (rst) begin
             Q <= 0;
             T_reg <= 0;
