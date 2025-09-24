@@ -1,7 +1,7 @@
 # verilog
 2025 2-2학기 전전설II 과제 제출
 
-## 하드웨어 연결 안될 떄
+## 2주차. 하드웨어 연결 안될 떄
 install_drivers_wrapper.bat \Xilinx\Vivado\2016.4\data\xicom\cable_drivers\nt64 c:\Xilinx\Vivado\2016.4\install.log c:\Xilinx\Vivado\2016.4\
 
 C:\Xilinx\2025.1\data\xicom\cable_drivers\nt64\dlc10_win10
