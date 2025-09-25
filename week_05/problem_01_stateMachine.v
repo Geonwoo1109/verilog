@@ -14,7 +14,7 @@ module stateMachine(clk, rst, x, y, state);
             endcase
         end
     end
-    always @(negedge rst or posedge clk) begin
+    always @(posedge rst or posedge clk) begin
         if (rst) y <= 1'b0;
         else begin
             case(state)
