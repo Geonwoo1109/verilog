@@ -13,6 +13,8 @@ module LCD_cursor(clk, rst, LCD_E, LCD_RS, LCD_RW, LCD_DATA, LED_out, number_btn
     
     wire LCD_E;
     reg LCD_RS, LCD_RW;
+
+    assign LCD_E = clk;
     
     reg [7:0] cnt;
     
