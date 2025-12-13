@@ -61,6 +61,7 @@ module main_tb();
                 #15 fn_btn <= 3'b100;   #5 fn_btn <= 3'b000;    // mode: start & stop -> start
             
             #15 set_btn <= 6'b001_000;   #5 set_btn <= 6'b000_000;    // num6, -1 min
+                #15 fn_btn <= 3'b010;   #5 fn_btn <= 3'b000;    // mode: reset
             #100;      // wait timer end
         
         #15 mode_btn <= 3'b001; #5 mode_btn <= 3'b000;  // mode: stopwatch
