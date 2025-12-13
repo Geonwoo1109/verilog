@@ -41,12 +41,13 @@ module watch(clk, rst, state, output_watch, set_btn, mode_ampm, world_dip);
             m <= 0;
             s <= 0;
             ms <= 0;
+            h_cnt <= 0;
         end
         else begin
             // default watch
-            if (h_cnt == 999) begin
+            if (h_cnt == 999) begin       // 999
                 h_cnt <= 0;
-                if (ms == 999) begin
+                if (ms == 999) begin    // 999
                     ms <= 0;
                     if (s == 59) begin
                         s <= 0;
@@ -60,8 +61,10 @@ module watch(clk, rst, state, output_watch, set_btn, mode_ampm, world_dip);
                 end else ms <= ms + 1;
             end else h_cnt <= h_cnt + 1;
             
-            h_ampm <= h;
-            if (mode_ampm) if (h>12) h <= h-12;
+            // h_ampm <= h;
+            if (mode_ampm) begin
+                if (h>12) h_ampm <= h-12;
+            end else h_ampm <= h;
         
             // setting time
             if (state == WATCH && world_dip == 0) begin
